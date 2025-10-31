@@ -1,0 +1,26 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f0f0;
+    text-align: center;
+}
+
+.container {
+    margin: 50px auto;
+    padding: 30px;
+    width: 400px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,.1);
+}
+
+form input, form select {
+    padding: 6px;
+    margin: 5px;
+    font-size: 16px;
+}
+
+form button {
+    padding: 6px 15px;
+    cursor: pointer;
+    font-size: 16px;
+}

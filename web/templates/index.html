@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h1>💱 Конвертер валют</h1>
+
+<form method="post">
+    <input type="number" name="amount" step="0.01" placeholder="Сума" required>
+    <select name="from_currency">
+        {% for code in rates %}
+        <option value="{{ code }}" {{"selected" if gft == code }} >{{ code }}</option>
+        {% endfor %}
+    </select>
+    ➡
+    <select name="to_currency">
+        {% for code in rates %}
+        <option value="{{ code }}" {{"selected" if rsv == code }}>{{ code }}</option>
+        {% endfor %}
+    </select>
+    <button type="submit">Конвертувати</button>
+</form>
+
+{% if result is not none %}
+<p>Результат: <b>{{ result }}</b> {{ request.form.get("to_currency") }}</p>
+{% endif %}
+{% endblock %}
